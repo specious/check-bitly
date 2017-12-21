@@ -30,8 +30,11 @@ for DOMAIN in $@; do
     continue
   fi
 
-  LOCATION_HEADER=$(curl -sI "https://$DOMAIN/1+" | grep Location)
-  CHECK_FOR="https://bitly.com/1+"
+  #
+  # Regex match for Bitly domain in location redirect header
+  #
+  LOCATION_HEADER=$(curl -sI --insecure "https://$DOMAIN/1+" | grep Location)
+  CHECK_FOR="https://bitly.com/"
 
   case $LOCATION_HEADER in
     *$CHECK_FOR*) show_result 1
