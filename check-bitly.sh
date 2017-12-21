@@ -2,13 +2,13 @@
 
 if [ $# -lt 1 ]
 then
-  echo "Check if a domain is a Bitly domain"
+  echo "Check domains to see if they are Bitly domains"
   echo
-  echo "Usage: $0 <domain>"
+  echo "Usage: $0 <domains...>"
   exit 1
 fi
 
-DOMAIN=$1
+# DOMAIN=$1
 
 show_result() {
   case $1 in
@@ -20,21 +20,23 @@ show_result() {
   esac
 }
 
-#
-# bitly.com itself is undetectable using the subsequent technique
-#
-if [[ $DOMAIN == "bitly.com" ]]
-then
-  show_result 1
-  exit 1
-fi
+for DOMAIN in $@; do
+  #
+  # bitly.com itself is undetectable using the subsequent technique
+  #
+  if [[ $DOMAIN == "bitly.com" ]]
+  then
+    show_result 1
+    continue
+  fi
 
-LOCATION_HEADER=$(curl -sI "https://$1/1+" | grep Location)
-CHECK_FOR="https://bitly.com/1+"
+  LOCATION_HEADER=$(curl -sI "https://$DOMAIN/1+" | grep Location)
+  CHECK_FOR="https://bitly.com/1+"
 
-case $LOCATION_HEADER in
-  *$CHECK_FOR*) show_result 1
-    ;;
-  *) show_result 0
-    ;;
-esac
+  case $LOCATION_HEADER in
+    *$CHECK_FOR*) show_result 1
+      ;;
+    *) show_result 0
+      ;;
+  esac
+done
