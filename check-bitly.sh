@@ -22,9 +22,9 @@ show_result() {
 
 for DOMAIN in $@; do
   #
-  # bitly.com itself is undetectable using the subsequent technique
+  # These are undetectable using the subsequent technique
   #
-  if [[ $DOMAIN == "bitly.com" ]]
+  if [[ $DOMAIN == "bitly.com" || $DOMAIN == "www.j.mp" ]]
   then
     show_result 1
     continue
