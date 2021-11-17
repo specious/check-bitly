@@ -4,8 +4,8 @@ j.mp
 bitly.is
 on.fb.me
 amzn.to
+ebay.to
 apple.co
-urls.im
 aol.it
 atmlb.com
 bbc.in
@@ -14,7 +14,6 @@ binged.it
 bloom.bg
 buff.ly
 cnet.co
-huff.to
 lat.ms
 nyr.kr
 nyti.ms
@@ -26,8 +25,6 @@ on.fb.me
 on.mtv.com
 on.vh1.com
 on.msnbc.com
-on.mash.to
-oreil.ly
 cs.pn
 politi.co
 tcrn.ch
@@ -37,16 +34,17 @@ yhoo.it
 4sq.com
 abcn.ws
 wapo.st
+abt.cm
 lat.ms
 ind.pn
 es.pn
 engt.co
 bzfd.it
 shebpr.es
+sforce.co
 pj.pizza
 b-gat.es
 m-gat.es
-theatln.tc
 go.nasa.gov
 red.ht
 wef.ch

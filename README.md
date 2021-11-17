@@ -11,11 +11,11 @@ $ ./check-bitly.sh bit.ly j.mp red.ht amazon.com duke.com
 ✖ duke.com is not a Bitly domain
 ```
 
-Want to get one like that? See: [How do I set up a Branded Short Domain (BSD)?](https://support.bitly.com/hc/en-us/articles/230898888-How-do-I-set-up-a-Branded-Short-Domain-BSD-)
+Find out how to [purchase](https://support.bitly.com/hc/en-us/articles/230898888-How-do-I-set-up-a-Branded-Short-Domain-BSD-) a custom domain from Bitly.
 
-## Want to help?
+## Want to contribute?
 
-Contributions are welcome. Please check the [issues](https://github.com/specious/check-bitly/issues) and feel free to point out how it could be better or open a pull request.
+Contributions are welcome. Please check the [issues](https://github.com/specious/check-bitly/issues) and feel free to point out how it could be better or submit a pull request.
 
 ## License
 

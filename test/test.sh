@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 check_domains() {
   cat "$1-domains.txt" | xargs ../check-bitly.sh
 }
 
-echo "Checking Bitly domains:"
+echo "Checking known Bitly domains:"
 echo
-check_domains "bitly"
+check_domains bitly
 
 echo
 echo "Checking non-Bitly domains:"
 echo
-check_domains "other"
+check_domains other
